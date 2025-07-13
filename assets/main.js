@@ -164,6 +164,7 @@ createTaskBtn.addEventListener("click", async function (e) {
     dueDate,
     cardColor,
     isCompleted: false,
+    createAt: new Date(),
   };
 
   try {
@@ -545,7 +546,8 @@ function renderTasks() {
 // Hàm lấy dữ liệu từ db.json khi mở giao diện
 async function start() {
   try {
-    const res = await fetch("http://localhost:3000/tasks?_sort=-createdAt"); // Gửi yêu cầu lấy danh sách task
+    // Sửa lại: sort theo id giảm dần để task mới luôn ở đầu
+    const res = await fetch("http://localhost:3000/tasks?_sort=createAt"); // Lấy danh sách task mới nhất lên đầu
     const tasks = await res.json(); // Chuyển response thành mảng object
     todoTasks = tasks; // Gán vào mảng todoTasks
     renderTasks(); // Render ra giao diện
