@@ -25,58 +25,7 @@ Task.prototype.markCompleted = function () {
 
 // ==== Mảng lưu tasks mẫu ====
 // Mảng lưu các task mẫu ban đầu
-let todoTasks = [
-  new Task(
-    "Team Meeting", // Tiêu đề
-    "Lorem ipsum dolor sit amet, consectetur elit tddv niorem ldfsfrfj.", // Mô tả
-    "meeting", // Loại
-    "high", // Độ ưu tiên
-    "10:30", // Bắt đầu
-    "12:00", // Kết thúc
-    "", // Ngày hết hạn
-    "blue" // Màu thẻ
-  ),
-  new Task(
-    "Work on Branding",
-    "Lorem ipsum dolor sit amet, consectetur elit tddv niorem ldfsfrfj.",
-    "design",
-    "medium",
-    "10:30",
-    "12:00",
-    "",
-    "purple"
-  ),
-  new Task(
-    "Make a Report for client",
-    "Lorem ipsum dolor sit amet, consectetur elit tddv niorem ldfsfrfj.",
-    "client",
-    "high",
-    "10:30",
-    "12:00",
-    "",
-    "yellow"
-  ),
-  new Task(
-    "Create a planer",
-    "Lorem ipsum dolor sit amet, consectetur elit tddv niorem ldfsfrfj.",
-    "planning",
-    "medium",
-    "10:30",
-    "12:00",
-    "",
-    "pink"
-  ),
-  new Task(
-    "Create Treatment Plan",
-    "Lorem ipsum dolor sit amet, consectetur elit tddv niorem ldfsfrfj.",
-    "other",
-    "medium",
-    "10:30",
-    "12:00",
-    "",
-    "green"
-  ),
-];
+let todoTasks = [];
 
 // ==== Biến filter/search trạng thái (let vì sẽ thay đổi) ====
 let currentFilter = "all"; // Biến lưu trạng thái filter hiện tại (all, active, completed)
